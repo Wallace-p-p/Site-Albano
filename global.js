@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Função para ajustar elementos baseados na proporção da tela
 function adjustForAspectRatio() {
   const viewportWidth = window.innerWidth;
@@ -119,7 +118,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     }
   });
-=======
 // Função para ajustar elementos baseados na proporção da tela
 function adjustForAspectRatio() {
   const viewportWidth = window.innerWidth;
@@ -240,5 +238,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     }
   });
->>>>>>> 9a7f556aa5a65b1d0f5ec671f9c5dc19d0176ef1
 });
