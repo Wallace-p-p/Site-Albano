@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albano Projetos Estruturais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:hero */
+.hero-section {
+  background-image: url('images/1aca4d968897d1feb4854b2b65fad8ed2882768d.png');
+  background-size: cover;
+  background-position: center;
+  min-height: min(1080px, 100vh);
+  display: flex;
+  flex-direction: column;
+  padding-top: min(40px, 4vh);
+  padding-bottom: min(100px, 10vh);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.logo {
+  display: block;
+  flex-shrink: 0;
+  margin-right: auto; /* Empurra os itens de navegação para a direita */
+}
+
+.logo img {
+  width: min(222px, 30vw); /* Máximo de 30% da largura da tela */
+  height: auto;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 3rem);
+  width: 100%;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: clamp(0.45rem, 1.5vw, 1.5rem);
+  margin: 0;
+  padding: 0;
+}
+.main-nav ul li a {
+  position: relative;
+  padding: 0.5rem 0; /* Ajuste o espaçamento vertical conforme necessário */
+  display: block;
+}
+
+.main-nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px; /* Espessura da linha */
+  background-color: #b0905d; /* Cor do botão (var(--color-primary)) */
+  transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+  width: 100%;
+}
+
+.main-nav a {
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(0.75rem, 1.5vw, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: min(150px, 15vh);
+}
+
+.hero-content h1 {
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: min(72px, 7vh);
+}
+
+.main-title {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  display: block;
+  font-size: clamp(1.5rem, 3.5vw, 4rem);
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hero-btn {
+  align-self: flex-start;
+}
+
+@media (max-width: 992px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .main-nav ul {
+    justify-content: center;
+  }
+  
+  .hero-content {
+    align-items: center;
+    text-align: center;
+    padding-top: min(80px, 8vh);
+  }
+  
+  .hero-btn {
+    align-self: center;
+  }
+}
+
+/* Para mobile */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    margin-right: 0;
+    width: 100%; /* Logo ocupa toda a linha */
+    text-align: center; /* Centraliza o logo */
+  }
+  
+  .logo img {
+    width: min(350px, 70vw);
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+  
+  .main-nav ul {
+    flex-direction: column; /* Itens em coluna */
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .main-nav ul li {
+    width: 100%; /* Cada item ocupa largura total */
+    text-align: center; /* Texto centralizado */
+  }
+  
+  .main-nav ul li a {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+}
+
+/* CSS for section section:about */
+.about-section {
+  background-color: var(--color-dark-bg);
+  padding: min(40px, 4vh) 0;
+  overflow: hidden;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: min(48px, 4vw);
+  max-width: 1920px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 0 0 61%;
+  margin-left: min(-372px, -20vw);
+}
+.about-image img {
+  width: 100%;
+  height: min(80vh, 800px); /* Máximo de 80% da altura da tela */
+  /* object-fit: cover;  Modo fit para preencher mantendo proporção 
+  object-position: center;*/
+}
+
+.about-text-content {
+  flex: 1 1 min(600px, 50%);
+  background-color: rgba(14, 23, 33, 0.5);
+  border-radius: min(49px, 3vw);
+  padding: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.8rem);
+  line-height: 1.5;
+  color: #ffffff;
+  margin-right: clamp(1rem, 2vw, 2rem);
+}
+
+.about-text-content h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.75rem);
+  font-weight: 400;
+  margin-bottom: 0.6em;
+}
+
+.about-text-content > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-text-content > ul > li {
+  margin-bottom: 1em;
+}
+
+.about-text-content strong {
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+.about-text-content ul ul {
+  list-style: '• ';
+  padding-left: 1.2em;
+  margin-top: 0.2em;
+  font-size: 0.9em;
+}
+
+.about-text-content ul ul li {
+  margin-bottom: 0.2em; /* Reduzi o espaçamento entre subitens */
+}
+
+@media (max-width: 1200px) {
+  .about-wrapper {
+    flex-direction: column;
+    gap: min(30px, 3vh);
+  }
+  
+  .about-image {
+    margin-left: 0;
+    width: 100%;
+    flex-basis: auto;
+  }
+  
+  .about-text-content {
+    margin-right: 0;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section { 
+    padding: min(50px, 5vh) 1rem; 
+  }
+}
+
+/* CSS for section section:electrical-projects */
+.projects-section {
+  padding: min(100px, 10vh) 0;
+  background-size: cover;
+  background-position: center;
+}
+
+#electrical-projects {
+  background-image: url('images/div4.png');
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: min(25px, 2.5vw);
+  margin-bottom: min(40px, 4vh);
+  flex-wrap: wrap;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.title-icon {
+  width: min(61px, 6vw);
+  height: min(61px, 6vw);
+  object-fit: contain;
+}
+
+.section-title h2 {
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: min(30px, 3vw);
+}
+
+.project-card {
+  background-color: #1A242F;
+  text-align: left;
+  overflow: hidden;
+  border-radius: min(12px, 1vw);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+.card-content p {
+  font-size: clamp(1.25rem, 2vw, 2.5rem);
+  margin: 0 0 min(2rem, 2vh) 0;
+}
+
+.card-btn {
+  display: block;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: min(1rem, 2vh) min(1.5rem, 3vw);
+  border-radius: min(9px, 1vw);
+  text-align: center;
+  font-size: clamp(1rem, 1.75vw, 2.5rem);
+  transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #c9a87a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .projects-section { 
+    padding: min(50px, 5vh) 0; 
+  }
+  
+  .section-title {
+    margin-bottom: min(40px, 4vh);
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .section-title h2 {
+    text-align: center;
+  }
+
+}
+
+/* CSS for section section:hydraulic-projects */
+#hydraulic-projects {
+  background-image: url('images/div5.png');
+}
+
+#hydraulic-projects .title-icon {
+  width: min(61px, 6vw);
+  height: min(61px, 6vw);
+}
+
+/* CSS for section section:footer */
+.cta-footer-section {
+  background-image: url('images/bd55f2a978b89f64e5aa8805e52adb71df0a2531.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: min(60px, 6vh);
+}
+
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: min(60px, 6vh);
+  padding-bottom: min(150px, 15vh);
+}
+
+.cta-logo {
+  width: min(866px, 30vw);
+  margin-bottom: min(60px, 6vh);
+}
+
+.cta-title {
+  font-size: clamp(2rem, 4.5vw, 5.375rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: min(60px, 6vh);
+  max-width: min(1526px, 90vw);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.site-footer {
+  background-color: var(--color-dark-bg);
+}
+
+.footer-separator {
+  height: min(18px, 2vh);
+  background-color: var(--color-primary);
+  margin-bottom: min(30px, 3vh);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: min(30px, 3vh);
+  padding-bottom: min(60px, 6vh);
+  gap: min(30px, 3vw);
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  line-height: 1.5;
+  flex: 1;
+  min-width: min(300px, 100%);
+}
+
+.footer-column p {
+  margin: 0;
+}
+
+.footer-column strong {
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .cta-container {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: min(40px, 4vh);
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-container {
+    padding-top: min(30px, 3vh);
+    padding-bottom: min(80px, 8vh);
+  }
+  
+  .footer-column {
+    min-width: 100%;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Classes de animação */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Delay para animações em sequência */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="section-hero" class="hero-section">
+  <header class="site-header container animate-on-scroll" data-animation="fadeIn">
+    <nav class="main-nav">
+      <a href="#" class="logo">
+        <img src="images/38207b09bc03b0dc85df9cdfe3fec48a30f64776.png" alt="Albano Projetos Estruturais Logo">
+      </a>
+      <ul>
+        <li><a href="#about">Projetos Estruturais</a></li>
+        <li><a href="#electrical-projects">Projetos Elétricos</a></li>
+        <li><a href="#hydraulic-projects">Projetos Hidráulicos</a></li>
+        <li><a href="#contact">Orçamento</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero-content container">
+    <h1 class="animate-on-scroll" data-animation="fadeInUp">
+      <span class="main-title">Nosso Portfólio</span>
+      <span class="subtitle animate-on-scroll delay-100" data-animation="fadeInUp">Conheça os nossos projetos</span>
+    </h1>
+    <a href="#contact" class="btn hero-btn animate-on-scroll delay-200" data-animation="fadeInUp">Solicite um orçamento aqui</a>
+  </div>
+</section>
+<section id="about" class="about-section">
+  <div class="about-wrapper">
+    <div class="about-image animate-on-scroll" data-animation="fadeInLeft">
+      <img src="images/1d5ed4c8ed3d35fe8fe82c347fdecffcba8c758d.png" alt="Construction site with engineers">
+    </div>
+    <div class="about-text-content animate-on-scroll" data-animation="fadeInRight">
+      <h2>Veja alguns dos projetos que já desenvolvemos:</h2>
+      <ul>
+        <li><strong>Residenciais Multifamiliares</strong>
+          <ul>
+            <li>Edifícios de médio e alto padrão</li>
+            <li>Empreendimentos do programa Minha Casa Minha Vida</li>
+            <li>Condomínios com soluções hidráulicas e elétricas otimizadas</li>
+          </ul>
+        </li>
+        <li><strong>Comerciais e Corporativos</strong>
+          <ul>
+            <li>Lojas, centros comerciais e sedes administrativas</li>
+            <li>Projetos com estruturas metálicas e fundações técnicas</li>
+          </ul>
+        </li>
+        <li><strong>Indústrias e Galpões</strong>
+          <ul>
+            <li>Soluções para estruturas pesadas em concreto e metálicas</li>
+            <li>Sistemas hidráulicos e elétricos industriais</li>
+          </ul>
+        </li>
+        <li><strong>Obras de Reforço e Recuperação Estrutural</strong>
+          <ul>
+            <li>Intervenções em estruturas existentes Laudos, diagnósticos e soluções para patologias</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="electrical-projects" class="projects-section">
+  <div class="container">
+    <div class="section-title">
+      <img src="images/909ccb933976450910d9b8f3b8a3d00de01e5ba6.png" alt="Electrical icon" class="title-icon">
+      <h2>Projetos Elétricos</h2>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card animate-on-scroll" data-animation="fadeInUp">
+        <img src="images/a712374eb6ef3e2bfcf8c3a957e00191bafc80fd.png" alt="Electrical installation in a building under construction">
+        <div class="card-content">
+          <p>Rua qualquer, cidade, SP</p>
+          <a href="#" class="card-btn">Saiba mais</a>
+        </div>
+      </article>
+      <article class="project-card animate-on-scroll" data-animation="fadeInUp">
+        <img src="images/79a7291b8a473418fad5c8e922294456d718062f.png" alt="Female engineer with solar panels">
+        <div class="card-content">
+          <p>Rua qualquer, cidade, SP</p>
+          <a href="#" class="card-btn">Saiba mais</a>
+        </div>
+      </article>
+      <article class="project-card animate-on-scroll" data-animation="fadeInUp">
+        <img src="images/cef9f4eb3c68e505c911c67ac189e01fea3d2605.png" alt="Worker on a cherry picker installing lighting on a building">
+        <div class="card-content">
+          <p>Rua qualquer, cidade, SP</p>
+          <a href="#" class="card-btn">Saiba mais</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="hydraulic-projects" class="projects-section">
+  <div class="container">
+    <div class="section-title">
+      <img src="images/1595e329d81394ba377d886f714adcb1846c1c97.png" alt="Hydraulic icon" class="title-icon">
+      <h2>Projetos Hidráulicos</h2>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card animate-on-scroll" data-animation="fadeInUp">
+        <img src="images/aef92915d8c518ec65fddc66d31eed72e321ae31.png" alt="Hydroelectric dam in a green valley">
+        <div class="card-content">
+          <p>Rua qualquer, cidade, SP</p>
+          <a href="#" class="card-btn">Saiba mais</a>
+        </div>
+      </article>
+      <article class="project-card animate-on-scroll delay-100" data-animation="fadeInUp">
+        <img src="images/1a21cc44dfc1f4223f5a9a6b614e496ac1f56654.png" alt="Aerial view of a large dam and reservoir">
+        <div class="card-content">
+          <p>Rua qualquer, cidade, SP</p>
+          <a href="#" class="card-btn">Saiba mais</a>
+        </div>
+      </article>
+      <article class="project-card animate-on-scroll delay-200" data-animation="fadeInUp">
+        <img src="images/0252c8a06402a8875e2ac283bf00888cd0b7d860.png" alt="Top-down view of dam spillways">
+        <div class="card-content">
+          <p>Rua qualquer, cidade, SP</p>
+          <a href="#" class="card-btn">Saiba mais</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="contact" class="cta-footer-section">
+  <div class="cta-container container">
+    <img src="images/38207b09bc03b0dc85df9cdfe3fec48a30f64776.png" alt="Albano Projetos Estruturais Logo" class="cta-logo animate-on-scroll" data-animation="fadeIn">
+    <h2 class="cta-title">Precisa de um projeto estrutural eficiente e confiável?</h2>
+    <a href="#" class="btn cta-btn animate-on-scroll delay-200" data-animation="fadeInUp">Solicite um orçamento</a>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-separator"></div>
+    <div class="footer-content container">
+      <div class="footer-column">
+        <p><strong>Valdemar Engenharia Estrutural</strong></p>
+        <p>Rua Qualquer, 123</p>
+        <p>Cidade - São Paulo</p>
+      </div>
+      <div class="footer-column">
+        <p><strong>Telefone:</strong> xxxxxxxxxxx</p>
+        <p><strong>E-mail:</strong> @xxxxxxxxxxxxx</p>
+        <p><strong>Redes sociais:</strong> @xxxxxxxxxxxxx</p>
+      </div>
+      <div class="footer-column">
+        <p><strong>Valdemar Engenharia Estrutural</strong></p>
+        <p>Rua Qualquer, 123</p>
+        <p>Cidade - São Paulo</p>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

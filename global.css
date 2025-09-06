@@ -1,0 +1,121 @@
+:root {
+  --color-primary: #b0905d;
+  --color-text: #ffffff;
+  --color-dark-bg: #0e1721;
+  --font-main: 'Istok Web', sans-serif;
+  
+  /* Novas variáveis de proporção */
+  --base-viewport: 1920; /* Largura base do design */
+  --base-height: 1080;   /* Altura base do design */
+  --vw-unit: calc(100vw / var(--base-viewport));
+  --vh-unit: calc(100vh / var(--base-height));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(14px + 0.2vw); /* Tamanho de fonte base responsivo */
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-dark-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 7vw, 7rem);
+  padding-right: clamp(1rem, 7vw, 7rem);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: clamp(0.75rem, 1.5vw, 1.5rem) clamp(1.5rem, 3vw, 3rem);
+  border-radius: 57px;
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.45;
+  transition: all 0.3s ease;
+  max-width: min(850px, 50vw);
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  background-color: #c9a87a;
+  transform: translateY(-2px);
+}
+
+/* Utilitários para proporção */
+.vw {
+  width: calc(var(--size) * var(--vw-unit));
+}
+
+.vh {
+  height: calc(var(--size) * var(--vh-unit));
+}
+
+.text-vw {
+  font-size: calc(var(--size) * var(--vw-unit));
+}
+
+/* Media queries baseadas em proporção */
+@media (max-aspect-ratio: 16/9) {
+  /* Telas mais quadradas ou verticais */
+  :root {
+    --base-viewport: 1200;
+  }
+}
+
+@media (max-aspect-ratio: 3/4) {
+  /* Dispositivos móveis na vertical */
+  :root {
+    --base-viewport: 800;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1.25rem;
+    padding: 0.875rem 1.5rem;
+  }
+}
